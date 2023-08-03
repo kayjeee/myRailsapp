@@ -1,28 +1,21 @@
 # frozen_string_literal: true
 
-def decode_char(morse_code)
-  morse_to_char = {
-    '.-' => 'A', '-...' => 'B', '-.-.' => 'C', '-..' => 'D', '.' => 'E',
-    '..-.' => 'F', '--.' => 'G', '....' => 'H', '..' => 'I', '.---' => 'J',
-    '-.-' => 'K', '.-..' => 'L', '--' => 'M', '-.' => 'N', '---' => 'O',
-    '.--.' => 'P', '--.-' => 'Q', '.-.' => 'R', '...' => 'S', '-' => 'T',
-    '..-' => 'U', '...-' => 'V', '.--' => 'W', '-..-' => 'X', '-.--' => 'Y',
-    '--..' => 'Z', ' ' => ' ' # space
-  }
+# Your other methods and code here...
 
-  morse_to_char[morse_code]
-end
-
+# Decode an entire word in Morse code.
+# Takes a string parameter `morse_word` and returns the string representation.
+# Every character in a word will be separated by a single space.
 def decode_word(morse_word)
-  morse_word.split(' ').map { |char| decode_char(char) }.join
+  morse_word.split.map { |char| decode_char(char) }.join
 end
 
-def decode(message)
-  words = message.split('   ')
-  decoded_words = words.map { |word| decode_word(word) }
-  decoded_words.join(' ')
+# Decode the entire message in Morse code.
+# Takes a string parameter `morse_message` and returns the string representation.
+# Every word will be separated by 3 spaces.
+def decode(morse_message)
+  morse_message.split('   ').map { |word| decode_word(word) }.join(' ')
 end
 
-# Test the decoding with the given Morse code message
-message = '.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'
-puts decode(message) # Output: "ABOX FULL OF RUBIESok"
+# Example usage:
+morse_code = '.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'
+puts decode(morse_code) # Output: "ABOXFULOFFRIES"
