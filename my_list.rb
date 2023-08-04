@@ -1,13 +1,11 @@
 class MyList
-    include MyEnumerable
-  
-    def initialize(*elements)
-      @list = elements
-    end
-  
-    def each
-      @list.each { |element| yield(element) }
-    end
+  include MyEnumerable
+
+  def initialize(*elements)
+    @list = elements
   end
 
-  
+  def each(&block)
+    @list.each(&block)
+  end
+end
