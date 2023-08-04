@@ -1,14 +1,14 @@
 # This module provides enumerable methods for MyList.
 module MyEnumerable
-  def all?(&block)
-    # Implementation of all? method
+    def all?(&)
+      # Implementation of all? method
+    end
+  
+    def any?(&)
+      # Implementation of any? method
+    end
+  
+    def filter(&)
+      # Implementation of filter method
+    end
   end
-
-  def any?(&block)
-    # Implementation of any? method
-  end
-
-  def filter(&block)
-    # Implementation of filter method
-  end
-end
