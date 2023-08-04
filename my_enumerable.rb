@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This module provides enumerable methods for MyList.
 module MyEnumerable
     def all?(&block)
@@ -12,4 +14,5 @@ module MyEnumerable
       # Implementation of filter method
     end
   end
+  
   
