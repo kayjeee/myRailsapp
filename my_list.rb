@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # This class represents a custom list and includes MyEnumerable module.
 class MyList
   include MyEnumerable

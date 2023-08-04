@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # This module provides enumerable methods for MyList.
 module MyEnumerable
   def all?(&block)
