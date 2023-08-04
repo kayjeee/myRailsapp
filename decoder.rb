@@ -6,4 +6,6 @@ def decode(morse_message)
   morse_message.split('   ').map { |word| decode_word(word) }.join(' ')
 end
 
-
+add # Example usage:
+morse_code = '.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'
+puts decode(morse_code) # Output: "ABOXFULOFFRIES"
