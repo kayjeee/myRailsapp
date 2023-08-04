@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def decode_word(morse_word)
   morse_word.split.map { |char| decode_char(char) }.join
 end
