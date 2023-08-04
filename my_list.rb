@@ -1,11 +1,13 @@
+# This class represents a custom list and includes MyEnumerable module.
 class MyList
-  include MyEnumerable
-
-  def initialize(*elements)
-    @list = elements
+    include MyEnumerable
+  
+    def initialize(*list)
+      @list = list
+    end
+  
+    def each(&block)
+      # Implementation of each method
+    end
   end
-
-  def each(&block)
-    @list.each(&block)
-  end
-end
+  
